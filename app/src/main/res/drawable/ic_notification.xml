@@ -1,0 +1,26 @@
+<!--
+  White silhouette for notification small icons (the system uses only the alpha
+  and tints it). A bolder, frame-filling version of the launcher's scatterbrain.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Head. -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="8"
+        android:pathData="M14,54 A40,40 0 1 1 94,54 A40,40 0 1 1 14,54 Z" />
+
+    <!-- Scattered thoughts spiralling out. -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M54.00,54.00 L54.36,54.09 L54.65,54.37 L54.81,54.78 L54.78,55.28 L54.54,55.79 L54.09,56.25 L53.44,56.56 L52.64,56.67 L51.76,56.52 L50.88,56.08 L50.10,55.35 L49.51,54.35 L49.20,53.14 L49.23,51.80 L49.65,50.43 L50.47,49.15 L51.68,48.06 L53.21,47.30 L54.98,46.94 L56.87,47.07 L58.75,47.72 L60.48,48.89 L61.90,50.54 L62.89,52.59 L63.33,54.92 L63.15,57.37 L62.31,59.79 L60.82,61.98 L58.75,63.78 L56.19,65.03 L53.32,65.60 L50.29,65.41 L47.33,64.42 L44.64,62.65 L42.42,60.19 L40.87,57.15 L40.13,53.73 L40.29,50.13 L41.38,46.60 L43.39,43.39 L46.23,40.74 L49.72,38.84 L53.68,37.88 L57.85,37.96 L61.95,39.12 L65.71,41.33 L68.84,44.50 L71.12,48.44 L72.34,52.92 L72.39,57.66 L71.21,62.35 L68.83,66.66 L65.36,70.31 L61.01,73.00 L56.02,74.53 L50.71,74.74 L45.43,73.58 L40.53,71.08 L36.36,67.35 L33.21,62.61 L31.34,57.13 L30.91,51.27 L32.00,45.39 L34.58,39.89" />
+</vector>
