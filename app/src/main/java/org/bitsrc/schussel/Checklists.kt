@@ -172,6 +172,15 @@ object Checklists {
         if (changed) save(context, updated)
     }
 
+    /** True if any list's reset time has come due since it was last applied (read-only). */
+    fun hasDueReset(context: Context): Boolean {
+        val now = System.currentTimeMillis()
+        return all(context).any { list ->
+            val minutes = list.resetMinutes ?: return@any false
+            list.lastResetAt < mostRecentReset(now, minutes)
+        }
+    }
+
     /** The most recent occurrence of [minutes]-past-midnight at or before [now]. */
     private fun mostRecentReset(now: Long, minutes: Int): Long {
         val cal = Calendar.getInstance().apply {

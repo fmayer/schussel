@@ -109,6 +109,7 @@ class MainActivity : ComponentActivity() {
                 when (val n = nav) {
                     Nav.Main -> MainScreen(
                         lists = lists,
+                        onTick = { if (Checklists.hasDueReset(this)) reload() },
                         onAddList = { Checklists.addList(this); reload() },
                         onOpenAbout = { nav = Nav.About },
                         onOpenLicenses = { nav = Nav.Licenses },
@@ -201,6 +202,7 @@ private fun ScreenScaffold(content: @Composable (Modifier) -> Unit) {
 @Composable
 private fun MainScreen(
     lists: List<Checklist>,
+    onTick: () -> Unit,
     onAddList: () -> Unit,
     onOpenAbout: () -> Unit,
     onOpenLicenses: () -> Unit,
@@ -212,12 +214,14 @@ private fun MainScreen(
     onToggleItem: (String, String, Boolean) -> Unit,
     onRemoveItem: (String, String) -> Unit,
 ) {
-    // Ticks the reset countdown while the screen is open (display only).
+    // Advances the reset countdown while the screen is open, and applies any reset that
+    // comes due while the app sits idle in the foreground.
     var now by remember { mutableStateOf(System.currentTimeMillis()) }
     LaunchedEffect(Unit) {
         while (true) {
             delay(30_000)
             now = System.currentTimeMillis()
+            onTick()
         }
     }
     var appMenuOpen by remember { mutableStateOf(false) }

@@ -54,16 +54,15 @@ schussel stores everything locally (in `SharedPreferences`) and never sends data
 - Checklists are persisted as JSON in `SharedPreferences` (`Checklists`).
 - A manifest-registered `BroadcastReceiver` listens for `ACTION_ACL_CONNECTED`, so it fires even
   when the app isn't running.
-- The daily reset is **lazy**: it's applied the next time the app opens or a device connects, rather
-  than via a scheduled alarm — no background service to be killed.
+- The daily reset is **lazy**: it's applied whenever the app opens, a device connects, or on a
+  periodic check while the app is open — rather than via a scheduled alarm, so there's no background
+  service to be killed.
 
 ## Known limitations
 
 - **Background reliability** depends on your phone. Manufacturer battery optimizers (Samsung,
   Xiaomi, Oppo, Huawei, …) can delay or drop the connect broadcast; exempting schussel from battery
   optimization helps. Works fine on my S26 without any changes though.
-- The **daily reset** is applied on the next app open or device connection, so a list flips from
-  “done” to “to-do” shortly after the reset time rather than exactly on it.
 
 ## License
 
