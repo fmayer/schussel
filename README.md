@@ -7,6 +7,8 @@ lights still on. This app is the antidote. You build a checklist, tie it to a Bl
 (typically your car), and when your phone connects, schussel nags you **only if you left something
 unticked**.
 
+![Screenshot](screenshots/main_screen.png)
+
 ## What it does
 
 You keep one or more checklists. Each list is linked to the Bluetooth device(s) that should trigger
