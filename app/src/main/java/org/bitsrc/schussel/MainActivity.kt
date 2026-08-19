@@ -36,6 +36,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
@@ -193,6 +194,9 @@ private fun ScreenScaffold(content: @Composable (Modifier) -> Unit) {
         content(
             Modifier
                 .padding(padding)
+                // Shrink content above the soft keyboard (edge-to-edge disables the
+                // manifest's adjustResize, so the IME inset must be consumed here).
+                .imePadding()
                 .padding(16.dp)
                 .fillMaxSize()
         )
