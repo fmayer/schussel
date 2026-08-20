@@ -1,6 +1,6 @@
 # schussel
 
-**Bluetooth-triggered checklists that remind you of what you forgot — before you walk away.**
+**Bluetooth-triggered checklists that remind you of what you forgot — before you drive off.**
 
 *Schussel* is German for a scatterbrained, forgetful person: the one who drives off with the
 lights still on. This app is the antidote. You build a checklist, tie it to a Bluetooth device
