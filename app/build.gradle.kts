@@ -36,6 +36,11 @@ android {
         }
     }
 
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     defaultConfig {
         applicationId = "org.bitsrc.schussel"
         minSdk = 29
